@@ -1,0 +1,9 @@
+{
+  "presets": ["@babel/preset-env"]
+}
+
+{"scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "node dist/cli.js"
+  }
+}

@@ -1,23 +1,17 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Asyyxx21/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Asyyxx21/frontend-project-44/actions)",
+  "description": "Brain Games CLI",
+  "main": "bin/brain-games.js",
   "type": "module",
-  "main": "index.js",
+  "scripts": {
+    "start": "node bin/brain-games.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Asyyxx21/frontend-project-44.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Asyyxx21/frontend-project-44/issues"
-  },
-  "homepage": "https://github.com/Asyyxx21/frontend-project-44#readme"
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
