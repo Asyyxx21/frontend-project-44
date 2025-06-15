@@ -1,20 +1,10 @@
-import eslint from 'eslint/use-at-your-own-risk';
-import tsParser from '@typescript-eslint/parser';
-import airbnb from 'eslint-config-airbnb-typescript';
+import js from '@eslint/js'
+import globals from 'globals'
+import { defineConfig } from 'eslint/config'
+import stylistic from '@stylistic/eslint-plugin'
 
-export default [
-  {
-    files: ['**/*.ts'],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        project: './tsconfig.json'
-      }
-    },
-    rules: {
-      'no-console': 'off',
-      'linebreak-style': 'off'
-    }
-  },
-  ...airbnb
-];
+export default defineConfig([
+  stylistic.configs.recommended,
+  { files: ['**/*.{js,mjs,cjs}'], plugins: { js }, extends: ['js/recommended'] },
+  { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } },
+])
